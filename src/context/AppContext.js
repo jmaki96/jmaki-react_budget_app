@@ -68,7 +68,7 @@ export const AppReducer = (state, action) => {
             }, 0);
 
             if(action.payload.budget < totalExpenses) {
-                alert("The new budget must be greater then the current expenses  £"+totalExpenses);
+                alert("The new budget must be greater then the current expenses "+state.currency+totalExpenses);
                 return {
                     ...state
                 }
@@ -76,7 +76,7 @@ export const AppReducer = (state, action) => {
 
             const maximumBudget = 20000;
             if (action.payload.budget > maximumBudget) {
-                alert("The new budget must not exceed the maximum budget of £"+maximumBudget);
+                alert("The new budget must not exceed the maximum budget of "+state.currency+maximumBudget);
                 return {
                     ...state
                 }
