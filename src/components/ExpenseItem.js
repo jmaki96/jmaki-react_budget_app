@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { TiDelete } from 'react-icons/ti';
 import { AppContext } from '../context/AppContext';
-import decrease from '../../public/decrease.png'
-import increase from '../../public/increase.png'
+import decrease from '../icons/decrease.png'
+import increase from '../icons/increase.png'
 
 const ExpenseItem = (props) => {
     const { dispatch, currency } = useContext(AppContext);
