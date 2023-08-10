@@ -17,12 +17,15 @@ const CurrencySelector = () => {
     }
 
     return (
-        <select className='alert alert-success' name="currency" id="currency" onChange={(event) => setCurrency(event.target.value)}>
+        <div className="input-group mb-3">
+            <label className="input-group-text" for="currency" line-height="35">Currency</label>
+            <select className='alert alert-success' name="currency" id="currency" onChange={(event) => setCurrency(event.target.value)}>
                 <option value="£">£ Pound</option>
                 <option value="$">$ Dollar</option>
                 <option value="€">€ Euro</option> 
                 <option value="₹">₹ Rupee</option>
-        </select>
+            </select>
+        </div>
     );
 };
 export default CurrencySelector;
